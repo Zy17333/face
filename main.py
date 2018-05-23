@@ -6,9 +6,9 @@ def loadImageSet():
     j =0
     for f in range(15):
         if f+1<10:
-            dir = "./00"+str(f+1)+"/"
+            dir = "./dataset/00"+str(f+1)+"/"
         else:
-            dir = "./0"+str(f+1)+"/"
+            dir = "./dataset/0"+str(f+1)+"/"
         for i in range(7):
             try:
                 img = cv2.imread(dir + "0"+str(i+1)+".jpg",0)
@@ -65,9 +65,9 @@ if __name__ == '__main__':
     for te in range(15):
         for i in range(len(nameList)):
             if te+1<10:
-                loadname = "./00"+str(te+1)+"/"+nameList[i]+".jpg"
+                loadname = "./dataset/00"+str(te+1)+"/"+nameList[i]+".jpg"
             else :
-                loadname = "./0"+str(te+1)+"/"+nameList[i]+".jpg"
+                loadname = "./dataset/0"+str(te+1)+"/"+nameList[i]+".jpg"
             print loadname
             #从每个文件夹里选取测试集人像照片
             judgeImg = cv2.imread(loadname,0)
